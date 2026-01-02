@@ -67,18 +67,14 @@ func _ready():
 		PankuModuleHistoryManager.new(),
 		PankuModuleEngineTools.new(),
 		PankuModuleKeyboardShortcuts.new(),
-		PankuModuleCheckLatestRelease.new(),
 		PankuModuleInteractiveShell.new(),
 		PankuModuleGeneralSettings.new(),
 		PankuModuleDataController.new(),
-		PankuModuleScreenCrtEffect.new(),
 		PankuModuleExpressionMonitor.new(),
 		PankuModuleTextureViewer.new(),
 		PankuModuleVariableTracker.new(),
-		PankuModuleAbout.new(),
-		PankuModuleSnakeGame.new(),
 	]
-	module_manager.init_manager(self, modules)
+	module_manager.init_manager(self, modules + extraModules)
 
 func _notification(what):
 	# quit event
